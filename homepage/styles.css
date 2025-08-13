@@ -1,0 +1,109 @@
+table {
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+td:nth-child(1) {
+  text-align: right;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+.center-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-bio {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.center-philosophy {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.center-hobbies {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.link-list li {
+  margin: 10px 0;
+}
+
+.link-list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #007bff;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+.paragraph-intro {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  color: blue;
+}
+
+@keyframes dance {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.moving-letters {
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 25pt;
+  color: blue;
+  animation: dance 1s infinite ease-in-out;
+}
+
+#randomText {
+  position: absolute;
+  font-size: 25pt;
+  font-weight: bold;
+  color: blue;
+}

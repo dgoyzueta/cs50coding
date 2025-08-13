@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Where is the citadel of Macchu Picchu located?</h3>
+                <button id="button1">Guadalajara, Mexico</button>
+                <button id="button2">Cuzco, Peru</button>
+                <button id="button3">La Paz, Bolivia</button>
+                <button id="button4">Tegucigalpa, Honduras</button>
+                <button id="button5">Quito, Ecuador</button>
+                <p id="correctButton"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital of Peru?</h3>
+                <input id="textAnswer" type="text" placeholder="Enter the name of the city here">
+                <button id="checkAnswerButton">Check Answer</button>
+                <p id="correctAnswer"></p>
+            </div>
+        </div>
+
+        <script>
+            // TODO: Add code to check answers to questions
+            // Check answers from buttons in the first question
+            document.querySelector('#button1').onclick = function() {
+                button1.style.backgroundColor = 'red';
+                document.querySelector('#correctButton').innerHTML = "Incorrect";
+            }
+            document.querySelector('#button2').onclick = function() {
+                button2.style.backgroundColor = 'green';
+                document.querySelector('#correctButton').innerHTML = "Correct!";
+            }
+            document.querySelector('#button3').onclick = function() {
+                button3.style.backgroundColor = 'red';
+                document.querySelector('#correctButton').innerHTML = "Incorrect";
+            }
+            document.querySelector('#button4').onclick = function() {
+                button4.style.backgroundColor = 'red';
+                document.querySelector('#correctButton').innerHTML = "Incorrect";
+            }
+            document.querySelector('#button5').onclick = function() {
+                button5.style.backgroundColor = 'red';
+                document.querySelector('#correctButton').innerHTML = "Incorrect";
+            }
+
+            // Check free response submission
+            document.querySelector('#checkAnswerButton').addEventListener('click', function() {
+                let response = document.querySelector('#textAnswer').value.trim();
+                if (response.toLowerCase() === 'lima') {
+                    textAnswer.style.backgroundColor = 'green';
+                    document.querySelector('#correctAnswer').innerHTML = "Correct!";
+                }
+                else {
+                    textAnswer.style.backgroundColor = 'red';
+                    document.querySelector('#correctAnswer').innerHTML = "Incorrect";
+                }
+            });
+        </script>
+
+    </body>
+</html>

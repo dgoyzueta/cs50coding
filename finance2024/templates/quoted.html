@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lookup Stock Symbol
+{% endblock %}
+
+{% block main %}
+    <form action="/quoted" method="post">
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+        </style>
+
+        <div class="mb-3">
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>Name of Stock</strong></th>
+                        <th><strong>Price per Stock</strong></th>
+                        <th><strong>Symbol</strong></th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ price }}</td>
+                        <td>{{ symbol }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+{% endblock %}

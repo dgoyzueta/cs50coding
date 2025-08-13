@@ -1,0 +1,36 @@
+HTML tags:
+<link>
+<body>
+<div>
+<ul>
+<li>
+<br>
+<table>
+<tr>
+<td>
+<p>
+<b>
+<i>
+<script>
+
+CSS:
+table
+td
+.center-link
+.center-container
+.link-list
+.link-list li
+.link-list a:hover
+.paragraph-intro
+.dancing-letters
+@keyframes dance
+.center-bio
+.center-philosophy
+.center-hobbies
+
+Javascript:
+I used Javascript with a for loop to create moving letters for the introductory idea (kind of title) for each page.
+Also, I used it to create a random text showing up on the main page.
+
+Bootstrap:
+I used it together with Javascript to create a random text showing up on the main page.

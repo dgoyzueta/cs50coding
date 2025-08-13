@@ -1,0 +1,16 @@
+sort1 uses: Bubble sort
+
+How do you know?: With 50K numbers, with reversed and random files, the program took 5.1 and 5.7 seconds
+respectively, but ordered data took 0.384. This shows a case where the numbers are ordered, Bubble sort takes
+the minimum number of steps because the file is already sorted.
+
+sort2 uses: Merge sort
+
+How do you know?: With 50K numbers, the 3 type of files took about 0.5 seconds on average.
+Merge sort had the lowest O(), meaning O(n log n), while the other sort programs have O(n^2).
+
+sort3 uses: Selection sort
+
+How do you know?: With 50K numbers, the 3 type of files took about 2.5 seconds on average showing an
+O(n^2). Also, the sort program with ordered numbers goes over the whole list of numbers regardless of the file
+being sorted already, while Bubble sort doesn't.

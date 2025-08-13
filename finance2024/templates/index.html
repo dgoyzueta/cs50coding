@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Owned Stocks and Current Market Value
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="get">
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+            }
+        </style>
+
+        <div class="mb-3">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th style="text-align: left;"><strong>Stock Name</strong></th>
+                        <th style="text-align: left;"><strong>Symbol</strong></th>
+                        <th style="text-align: right;"><strong>Owned shares</strong></th>
+                        <th style="text-align: right;"><strong>Market price</strong></th>
+                        <th style="text-align: right;"><strong>Total Value</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in stocks %}
+                    <tr>
+                        <td style="text-align: left;">{{ row.name }}</td>
+                        <td style="text-align: left;">{{ row.symbol }}</td>
+                        <td style="text-align: right;">{{ row.shares }}</td>
+                        <td style="text-align: right;">{{ row.price }}</td>
+                        <td style="text-align: right;">{{ row.total }}</td>
+                    {% endfor %}
+                    </tr>
+                    <br>
+                </tbody>
+            </table>
+            <br>
+            <table align="right">
+                <tr>
+                    <td style="text-align: right;"><strong>Cash available: </strong></td>
+                    <td style="text-align: right;"><strong>{{ cash }}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><strong>TOTAL ASSETS:</strong></td>
+                    <td style="text-align: right;"><strong>{{ totalAssets }}</strong></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+{% endblock %}

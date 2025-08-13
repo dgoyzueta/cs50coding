@@ -1,0 +1,2 @@
+select round(avg(per_pupil_expenditure), 2) as "Average District Per-Pupil Expenditure"
+from expenditures;
